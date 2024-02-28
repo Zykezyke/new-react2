@@ -1,3 +1,9 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: #212529;
+}
+
 .App {
   text-align: center;
 }
@@ -12,16 +18,26 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height of the viewport */
+}
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(255, 255, 255);
+}
+
+.App-header h1 {
+  font-size: calc(40px + 2vmin);
+  color: rgb(255, 255, 255);
 }
 
 .App-link {
@@ -35,4 +51,70 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.btn-lighter {
+  background-color: #4c5763;
+  border-color: #6c757d;
+  color: #f8f9fa;
+}
+
+.btn-lighter:hover {
+  background-color: #212529;
+  border-color: #6c757d;
+  color: #f8f9fa;
+}
+
+.btn-danger.btn-lighter {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-success.btn-lighter {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.card-lighter {
+  background-color: #343a40;
+  border-color: #6c757d;
+  color: #f8f9fa;
+}
+
+.input-lighter {
+  background-color: #343a40;
+  border-color: #6c757d;
+  color: #f8f9fa;
+}
+
+.input-lighter:focus {
+  background-color: #606c78;
+  border-color: #6c757d;
+  color: #f8f9fa;
+}
+
+.input-lighter:hover {
+  background-color: #49525b;
+}
+
+.input-lighter::placeholder {
+  color: #f8f9fa;
+}
+
+.add-darker {
+  background-color: #23272a;
+  color: white;
+  border: 1px solid white;
+}
+
+.add-darker:hover {
+  background-color: #343a40;
+  color: white;
+  border: 1px solid white;
+}
+
+.add-darker:active {
+  background-color: #606c78;
+  color: black;
+  border: 1px solid black;
 }

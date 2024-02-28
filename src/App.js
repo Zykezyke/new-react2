@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import ItemList from "./ItemList";
-import items from "./data";
 import Header from "./Header";
 import Form from "./Form";
-import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 const App = () => {
   const [items, setItems] = useState([]);
-  const handleAddItems = (item) => {
-    setItems((items) => [...items, item]);
+
+  const handleAddItem = (newItem) => {
+    const existingItemIndex = items.findIndex(
+      (item) => item.name.toLowerCase() === newItem.name.toLowerCase()
+    );
+
+    if (existingItemIndex !== -1) {
+      const updatedItems = [...items];
+      updatedItems[existingItemIndex].quantity += newItem.quantity;
+      setItems(updatedItems);
+    } else {
+      setItems([...items, newItem]);
+    }
   };
+
   const handleDeleteItem = (id) => {
     setItems(items.filter((item) => item.id !== id));
   };
@@ -22,10 +33,13 @@ const App = () => {
       )
     );
   };
+
   return (
-    <div>
+    <div className="bg-dark text-light app-container">
+      {" "}
+      {/* Apply dark theme to entire app */}
       <Header />
-      <Form onAddItem={handleAddItems} />
+      <Form onAddItem={handleAddItem} />
       <ItemList
         items={items}
         onDelete={handleDeleteItem}
