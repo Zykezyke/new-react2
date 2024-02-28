@@ -15,7 +15,12 @@ const Item = ({ item, onDelete, onToggleChecked }) => {
           <button className="btn btn-lighter mx-2" onClick={onDelete}>
             <FontAwesomeIcon icon={faTrash} />
           </button>
-          <button className="btn btn-lighter" onClick={onToggleChecked}>
+          <button
+            className={
+              "btn mx-2 " + (item.isChecked ? "btn-darker" : "btn-lighter")
+            }
+            onClick={onToggleChecked}
+          >
             {item.isChecked ? (
               <FontAwesomeIcon icon={faTimes} />
             ) : (

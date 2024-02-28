@@ -37,7 +37,6 @@ const App = () => {
   return (
     <div className="bg-dark text-light app-container">
       {" "}
-      {/* Apply dark theme to entire app */}
       <Header />
       <Form onAddItem={handleAddItem} />
       <ItemList

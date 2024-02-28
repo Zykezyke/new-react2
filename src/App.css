@@ -66,6 +66,19 @@ body {
   color: #f8f9fa;
 }
 
+.btn-darker {
+  background-color: #f8f9fa;
+  border-color: #000000;
+  color: #4c5763;
+  transition: background-color 0.3s ease;
+}
+
+.btn-darker:hover {
+  background-color: #f8f9fa;
+  border-color: #000000;
+  color: #212529;
+}
+
 .btn-danger.btn-lighter {
   background-color: #dc3545;
   border-color: #dc3545;
