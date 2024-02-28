@@ -57,6 +57,7 @@ body {
   background-color: #4c5763;
   border-color: #6c757d;
   color: #f8f9fa;
+  transition: background-color 0.3s ease;
 }
 
 .btn-lighter:hover {
@@ -85,12 +86,14 @@ body {
   background-color: #343a40;
   border-color: #6c757d;
   color: #f8f9fa;
+  transition: background-color 0.3s ease;
 }
 
 .input-lighter:focus {
   background-color: #606c78;
   border-color: #6c757d;
   color: #f8f9fa;
+  transition: background-color 0.3s ease;
 }
 
 .input-lighter:hover {
@@ -105,6 +108,7 @@ body {
   background-color: #23272a;
   color: white;
   border: 1px solid white;
+  transition: background-color 0.3s ease;
 }
 
 .add-darker:hover {
