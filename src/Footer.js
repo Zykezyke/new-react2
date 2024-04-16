@@ -12,8 +12,9 @@ function Footer({ items }) {
   return (
     <div className="App-footer bg-dark text-light py-3">
       <p className="mb-0">
-        You have {items.length} in your list and have already completed{" "}
-        {completedItem.length}. There are {totalQuantity} in total.
+        You have {items.length} unique items in your list and have already
+        completed {completedItem.length}. There are {totalQuantity} items in
+        total.
       </p>
     </div>
   );
