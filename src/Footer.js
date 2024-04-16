@@ -14,9 +14,12 @@ function Footer({ items }) {
     0
   );
 
-  let percentage = (completedItem.length / items.length) * 100;
+  let percentage =
+    items.length === 0 ? 0 : (completedItem.length / items.length) * 100;
 
-  let totalPercentage = (totalCompleted / totalQuantity) * 100;
+  let totalPercentage =
+    totalQuantity === 0 ? 0 : (totalCompleted / totalQuantity) * 100;
+
   return (
     <div className="App-footer bg-dark text-light py-3">
       <p className="mb-0">Items Listed: {items.length}</p>
